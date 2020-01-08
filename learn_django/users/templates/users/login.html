@@ -1,0 +1,21 @@
+{% extends "newapp/base.html" %}
+{% block content %}
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Log In</legend>
+            {{ form }}
+        </fieldset>
+        <div>
+            <button class="btn btn-outline-info" type="submit">Sign Up</button>
+        </div>
+
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            NEED AN ACCOUNT? <a class="nl-2" href="{% url 'register' %}">Sign up</a>
+        </small>
+    </div>
+</div>
+{% endblock %}
